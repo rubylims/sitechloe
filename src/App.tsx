@@ -8,6 +8,7 @@ import ProjectHistory from './ProjectHistory';
 import { AuthProvider, useAuth } from './AuthContext';
 import LoginForm from './LoginForm';
 import ProjectsPage from './ProjectsPage';
+import RegisterSuccess from './RegisterSuccess';
 
 const AppWrapper = styled.div`
   min-height: 100vh;
@@ -26,7 +27,6 @@ const NavbarBg = styled.div`
 `;
 
 const NavbarInner = styled.nav`
-  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
@@ -74,7 +74,7 @@ const Header = styled.header`
 `;
 
 const HeaderInner = styled.div`
-  max-width: 1200px;
+  max-width: 1000px;
   margin: 1rem auto;
   padding: 0 2rem;
   display: flex;
@@ -132,6 +132,7 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/login" element={<Login />} />
+              <Route path="/register-success" element={<RegisterSuccess />} />
             </Routes>
           </CenteredContainer>
         </Router>
